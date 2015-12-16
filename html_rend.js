@@ -15,8 +15,10 @@ if (Meteor.isClient) {
       return function(editor){
         editor.setOption("lineNumbers",true);
         editor.setOption("mode","html");
+        editor.setOption("smartIndent",true);
+        editor.setOption("dragDrop",true);
         editor.on("change",function(cm_editor,info){
-          $("#preview_frame").contents().find("html").text(cm_editor.getValue());
+          $("#preview_frame").contents().find("html").html(cm_editor.getValue());
         });
       }
     },

@@ -41,6 +41,7 @@ meteor-base@1.0.1
 minifiers@1.1.7
 minimongo@1.0.10
 mizzao:sharejs@0.7.5
+mizzao:sharejs-ace@1.2.0
 mizzao:sharejs-codemirror@4.12.0
 mobile-experience@1.0.1
 mobile-status-bar@1.0.6
