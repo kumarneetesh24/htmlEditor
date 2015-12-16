@@ -13,12 +13,14 @@ if (Meteor.isClient) {
     //helper to configure code mirror editor
     config: function(){
       return function(editor){
-        editor.setOption("lineNumbers",true);
-        editor.setOption("mode","html");
-        editor.setOption("smartIndent",true);
-        editor.setOption("dragDrop",true);
-        editor.on("change",function(cm_editor,info){
-          $("#preview_frame").contents().find("html").html(cm_editor.getValue());
+        editor.setOption("lineNumbers",true);// add line number before the line
+        editor.setOption("mode","html");// set mode to html
+        editor.setOption("smartIndent",true);// add indentation feature
+        editor.setOption("dragDrop",true);// add drap drop of text
+        editor.setSize(500,550); // change size of editor
+        // function to change preview template
+        editor.on("change",function(cm_editor,info){   
+          $("#preview_frame").contents().find("html").html(cm_editor.getValue()); //jquery to fetch content and render content
         });
       }
     },

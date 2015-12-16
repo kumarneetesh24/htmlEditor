@@ -3,3 +3,12 @@
 .top-margin{
 	margin-top:50px;
 }
+
+#preview_frame{
+
+	border-left:4px solid black ;
+	margin-bottom:5px; 
+	margin-left:-3px;
+	padding-left:2px;
+	max-width: 100%;
+}
