@@ -1,0 +1,12 @@
+<head>
+  <title>html_rend</title>
+</head>
+
+<body>
+  <h1>HTML Editor</h1>
+  {{> editor}}
+</body>
+
+<template name="editor">
+  {{> sharejsCM docid=mydoc onrend=config id="editor"}}
+</template>
