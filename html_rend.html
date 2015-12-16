@@ -3,10 +3,23 @@
 </head>
 
 <body>
-  <h1>HTML Editor</h1>
-  {{> editor}}
+  <nav class="navbar navbar-default navbar-fixed-top">
+  		<div class="container">
+    		<a class="navbar-brand" href="#">HTML Editor</a>
+  		</div> <!-- / nav container -->
+	</nav> 
+	<div class="container top-margin">
+  		<div class="row">
+  			<div class="col-sm-6">{{> editor}}</div>
+  			<div class="col-sm-6">{{> preview}}</div>
+  		</div>
+  	</div>
 </body>
 
 <template name="editor">
-  {{> sharejsCM docid=mydoc onrend=config id="editor"}}
+  {{> sharejsCM docid=mydoc onRender=config id="editor"}}
+</template>
+
+<template name="preview">
+	<iframe id="preview_frame" ></iframe>
 </template>
