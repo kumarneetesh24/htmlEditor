@@ -9,6 +9,13 @@ if (Meteor.isClient) {
         return doc._id;
       }
       else return undefined;
+    },
+    //helper to configure code mirror editor
+    config: function(){
+      return function(editor){
+        editor.setOption("lineNumbers",true);
+        editor.setOption("mode","html");
+      }
     }
   });
 }
